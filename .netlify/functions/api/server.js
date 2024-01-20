@@ -18,5 +18,9 @@ app.get(
   '/',
   (req, res) => res.json({ ok: true })
 )
+app.get(
+  '/.netlify/functions/api',
+  (req, res) => res.json({ ok: true })
+)
 
 module.exports.handler = serverless(app);
